@@ -1,8 +1,9 @@
 #include<stdio.h>
-
-int main(int argc, char* argv[]){
+#include<stdlib.h>
+int main(int argc, char * argv[]){    
+    for(int i = 0;i < argc;i++){
+    	printf("arg for i: %d = %s\n",i,argv[i]);
+    }
     
-    printf("This is a c program");
-
     exit(0);
 }
