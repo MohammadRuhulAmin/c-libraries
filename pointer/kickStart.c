@@ -17,10 +17,16 @@ int main(){
 	printf("\n\n");
 	
 	float d = 12.434;
+	
 	float *r = &d;
 	printf("Address of d:%p\n",r);
 	printf("using (void*) address of d:%p\n",(void*)r);
 	printf("value of d:%f\n",*r);
+	
+	char *string = "this is a string";
+	printf("Address of string:%p\n",string);
+	printf("using (void*) address of string:%p\n",(void*)string);
+	
 	
 	exit(0);
 }
