@@ -17,15 +17,28 @@ int main(){
 	printf("\n\n");
 	
 	float d = 12.434;
-	
 	float *r = &d;
 	printf("Address of d:%p\n",r);
 	printf("using (void*) address of d:%p\n",(void*)r);
 	printf("value of d:%f\n",*r);
 	
+	printf("\n\n");
+	
 	char *string = "this is a string";
 	printf("Address of string:%p\n",string);
 	printf("using (void*) address of string:%p\n",(void*)string);
+	
+	printf("\n\n");
+	
+	int array[5] = {1,2,3,4,5};
+	int *arrPtr = array;
+	printf("Address of array:%p\n",arrPtr);
+	for(int i = 0;i<5;i++){
+		printf("data value of index:%d , %d, address %p\n",i, *(arrPtr), (arrPtr+1));
+		arrPtr = arrPtr+1;
+	}
+	
+	
 	
 	
 	exit(0);

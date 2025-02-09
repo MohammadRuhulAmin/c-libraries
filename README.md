@@ -9,6 +9,8 @@
 
 ```c
     gcc -S <file_path> -o <executable_file_name>
+    
+    gcc -std=c11 kickStart.c -o ks
 ```
 
 # Lets Jump into pointer first
