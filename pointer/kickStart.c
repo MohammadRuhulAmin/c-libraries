@@ -38,7 +38,23 @@ int main(){
 		arrPtr = arrPtr+1;
 	}
 	
+	printf("\n\n");
 	
+	/*[3] = length of the array, or maximum number of strings
+	  [20] = maximum length of each string
+	*/
+	char names[3][20] = {"Ruhul","sakib","sajid"};
+	for(int i = 0;i<3;i++){
+		printf("%s, ", names[i]);
+	}
+	printf("\n\n");
+	
+	char nameList[3][20] = {"abc","def","pqr"};
+	char (*nameListPtr)[20] = nameList;
+	for(int i = 0;i<3;i++){
+		printf("value of nameList i :%d = %s, address: %p\n", i ,*nameListPtr, nameListPtr);
+		nameListPtr += 1;
+	}
 	
 	
 	exit(0);
