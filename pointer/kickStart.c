@@ -56,6 +56,42 @@ int main(){
 		nameListPtr += 1;
 	}
 	
+	char myArr[5][10] = {
+	"Ruhul", "Sakib","Sajid","Ruhul","abc"
+	};
+	
+	char (*myArrPtr)[10] = myArr;
+	int count = 0;
+	int *countPtr = &count;
+	
+	for(int i = 0;i<5;i++){
+		printf("%s %p\n",*myArrPtr, (void*)myArrPtr);
+		if(strcmp(*myArrPtr , "Ruhul") == 0) {
+			count++;
+			printf("xxx\n");
+			printf("%s=>>>",*myArrPtr);
+		}
+		myArrPtr++;
+	}
+	
+	printf("Total Count From countPtr :%d, count : %d\n", *countPtr,count);
+	
+	printf("\n\n");
+	
+	char email[3][40] = {
+	"ruhul@ba","sakib@abc","sajid@qs"
+	};
+	
+	char store[5][20];
+	char (*emailPtr)[40] = email;
+	for(int i = 0;i<3;i++){
+		printf("%s-> %p\n",*emailPtr, (void*)emailPtr);
+		emailPtr++;
+		strcpy(store[i],(void*)emailPtr);
+	}
+	
+	printf("\n%s\n",store[0]);
+	
 	
 	exit(0);
 }
