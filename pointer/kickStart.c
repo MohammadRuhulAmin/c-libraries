@@ -92,6 +92,7 @@ int main(){
 	
 	printf("\n%s\n",store[0]);
 	
+		
 	
 	exit(0);
 }
